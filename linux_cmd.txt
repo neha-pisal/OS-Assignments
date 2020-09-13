@@ -1,0 +1,117 @@
+->  more file1.txt file2.txt file3.txt file4.txt
+
+->cp -i hello.cpp prg2.sh
+cp: overwrite 'prg2.sh'?
+
+->$ ~/
+-bash: /home/nehap/: Is a directory
+
+-> less file1.txt file2.txt file3.txt file4.txt
+
+-> tail -2 file1.txt
+
+-> grep "s" file1.txt
+neha pisal
+satara
+nehap@TMP259-G2-M:~/cdac$ grep s file1.txt
+neha pisal
+satara
+nehap@TMP259-G2-M:~/cdac$ grep s file[1-5].txt
+file1.txt:neha pisal
+file1.txt:satara
+file2.txt:shwetlana
+file3.txt:sssss
+file4.txt:satara
+file4.txt:neha pisal
+file5.txt:Neha Pisal
+nehap@TMP259-G2-M:~/cdac$ grep sh file[1-5].txt
+file2.txt:shwetlana
+nehap@TMP259-G2-M:~/cdac$ grep sh file*.txt
+file2.txt:shwetlana
+nehap@TMP259-G2-M:~/cdac$ grep s file*.txt
+file1.txt:neha pisal
+file1.txt:satara
+file2.txt:shwetlana
+file3.txt:sssss
+file4.txt:satara
+file4.txt:neha pisal
+file5.txt:Neha Pisal
+file8.txt:sssss
+nehap@TMP259-G2-M:~/cdac$ grep  f1.txt
+hellooo
+hiiii
+
+
+-> sort file1.txt
+cdac mumbai
+neha pisal
+satara
+nehap@TMP259-G2-M:~/cdac$ sort -r file1.txt
+satara
+neha pisal
+cdac mumbai
+nehap@TMP259-G2-M:~/cdac$ sort -ru file1.txt
+satara
+neha pisal
+cdac mumbai
+nehap@TMP259-G2-M:~/cdac$ sort -u file1.txt
+cdac mumbai
+neha pisal
+satara
+nehap@TMP259-G2-M:~/cdac$ sort  file1.txt file2.txt
+cdac mumbai
+neha pisal
+satara
+shwetlana
+nehap@TMP259-G2-M:~/cdac$ sort  file1.txt file2.txt file3.txt
+aaaaa
+cdac mumbai
+neha pisal
+qqqqq
+satara
+shwetlana
+sssss
+
+-> echo neha           pisal            satara
+neha pisal satara
+
+-> echo *
+dir1 file1.txt file2.txt file3.txt file4.txt file5.txt file6.txt file7.txt file8.txt neha.txt s1.txt s2.txt s3.txt s4.txt s5.txt
+nehap@TMP259-G2-M:~/cdac$ echo s*.txt
+s1.txt s2.txt s3.txt s4.txt s5.txt
+
+-> echo $((2+2*8))
+18
+
+->echo $(((5**2)*3))
+75
+echo $(((3*4)/3))
+4
+
+-> echo "this is $((5+9))th May"
+this is 14th May
+echo Day$((1+1))
+Day2
+echo date = $((2+8))sept 2020
+date = 10sept 2020
+
+-> echo Front-{A,B,C}-Back
+Front-A-Back Front-B-Back Front-C-Back
+echo number_{1,2,3,4}
+number_1 number_2 number_3 number_4
+echo number_{{1,2,3,4}}
+number_{1} number_{2} number_{3} number_{4}
+
+-> echo {z..a}
+z y x w v u t s r q p o n m l k j i h g f e d c b a
+echo {Z..A}
+Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+
+-> echo aA{1..15}b
+aA1b aA2b aA3b aA4b aA5b aA6b aA7b aA8b aA9b aA10b aA11b aA12b aA13b aA14b aA15b
+
+->
+-rw-rw-rw- 1 nehap nehap   30 Sep  8 23:41 file1.txt
+ chmod 644 file1.txt
+-rw-r--r-- 1 nehap nehap   30 Sep  8 23:41 file1.txt
+
