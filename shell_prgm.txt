@@ -1,0 +1,124 @@
+
+1. Write a shell script to Print prime numbers from 1 to n. Read the value of n
+from user.
+
+
+echo "enter a number to find prime no"
+read n
+for(( i=2; i<=$n; i++ ))
+do
+        count=0
+        for(( j=2; j<i; j++ ))
+        do
+                if [ `expr $i % $j` -eq 0 ]
+                then
+                        count=1
+                fi
+
+        done
+        if [ $count -eq 0 ]
+        then
+                echo $i
+        fi
+done
+
+
+2 
+
+echo "Enter number"
+read n
+if [ `expr $n % 2` -eq 0 ]
+then
+        echo $n "is even no"
+else
+        echo $n "is odd no"
+fi
+~    
+
+3 3. Write a shell script to convert a decimal number to binary number
+
+echo "Enter a number"
+read n
+arr=()
+i=0
+rem=1
+str=""
+while [ $n -gt 0 ]
+do
+        n=`expr $n / 2`
+        rem=`expr $n % 2`
+        str=$rem$str
+        echo $str | rev
+done
+
+
+4.Write a script to swap 2 numbers using intermediate variable.
+
+echo "Enter 2 no"
+read a
+read b
+num=0
+num=$a
+a=$b
+b=$num
+echo $a " "$b
+
+
+Q 5 Write a script to swap 2 numbers using intermediate variable.
+5. Write a script to swap 2 numbers without using intermediate variable.
+echo "Enter two number"
+read a
+read b
+a=$((a+b))
+b=$((a-b))
+a=$((a-b))
+echo $a $b
+
+6. Write a script to reverse a number using while loop.
+Example:
+input : 12 output: 21
+input : 213 output: 312
+input : 125634 output:436521
+
+echo "Enter a number"
+read n
+while [ `expr $n % 2` -eq 0 ]
+do
+        echo $n | rev
+        break
+done
+
+q12
+
+read -p "enter the name of name  " filename
+if [ -e $filename ]
+then
+        echo "File exist"
+else
+        echo "File doesn't exist"
+fi
+
+
+q16
+
+arr=()
+for i in {1..10}
+do
+        arr[i]=$i
+        echo ${arr[i]}
+done
+echo ${#arr[@]}
+
+
+q7
+
+read num
+while [ num ]
+do
+        for (( i=1; i<11; i++ ))
+        do
+                ans=$(($num*$i))
+                echo "$num * $i =" $ans
+        done
+        break
+done
