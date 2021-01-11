@@ -389,7 +389,7 @@ b)cat -n file1.txt
 
 c)tac file1.txt
 
-d)
+d)cat file1 file2 file3 > newfile
 
 5)
 a)[column file1.txt]
